@@ -1,3 +1,5 @@
+# Predict whether an individual has ADHD or not
+
 # Set working directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
@@ -102,7 +104,7 @@ train_ds <- tensor_dataset(X_train_tensor, y_train_tensor)
 train_dl <- dataloader(train_ds, batch_size = 16, shuffle = TRUE)
 
 # Define optimizer
-optimizer <- optim_adam(model$parameters, lr = 0.03)
+optimizer <- optim_adam(model$parameters, lr = 0.01)
 
 # Training loop
 for (epoch in 1:100) {

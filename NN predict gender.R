@@ -1,3 +1,5 @@
+# Predicting if ADHD individuals are female or not
+
 # Set working directory
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
